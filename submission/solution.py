@@ -36,7 +36,8 @@ def open_data(dataset):
             library_data['{}'.format(i)] = {'num_books' : num_books,
                                             'signup' : signup,
                                             'books_per_day' : books_per_day,
-                                            'books' : books
+                                            'books' : books,
+                                            'opt_days' : signup + (books / books_per_day)
                                             }
 
         return {'total_books' : total_books, 
@@ -49,6 +50,7 @@ def open_data(dataset):
 def solution_naive(dataset):
     data = open_data(dataset)
     library_data = data['library_data']
-    
+    print(data)
+
 
 solution_naive('dataset_A.txt')
