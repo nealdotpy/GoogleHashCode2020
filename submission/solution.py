@@ -85,7 +85,7 @@ def solution_naive(dataset):
     #print('DTF: {}, DL: {}'.format(library_data[55]['days_to_finish'], days_left))
     libs_to_use = 0
     i = 0
-    FACTOR = 4
+    FACTOR = 2
     delta = (library_data[0]['days_to_finish'] - ((library_data[0]['num_books']//FACTOR) // library_data[0]['books_per_day']))
     while (days_left - delta > 0 or i < len(library_data)-2):
         num_books = library_data[i]['num_books']
@@ -119,4 +119,4 @@ def solution_naive(dataset):
             file.write(data)
             file.write('\n')
 
-solution_naive('dataset_D.txt')
+solution_naive('dataset_F.txt')
